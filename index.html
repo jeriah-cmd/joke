@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play MP3 on Click</title>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p>Click the button below to play the audio.</p>
+
+  <audio id="myAudio" src="your-audio.mp3"></audio>
+
+  <button onclick="playAudio()">Play Audio</button>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('myAudio');
+      audio.play().catch(err => {
+        console.error('Playback failed:', err);
+      });
+    }
+  </script>
+</body>
+</html>
